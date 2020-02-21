@@ -1,0 +1,48 @@
+body {
+    height: 100vh;
+}
+    @keyframes fire {
+        0% {
+             background: red;
+            transform: scale(1.1);
+        }
+
+        20% {
+             background: blue;
+            transform: scale(1.1) rotate(45deg);
+        }
+
+        50% {
+             background: yellow;
+            transform: scale(1.1) rotate(-45deg);
+        }
+
+        100% {
+             background: red;
+            transform: scale(1.1);
+        }
+    }
+
+.container {
+    width: 300px;
+    height: 100px;
+    background: red;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 1s, transform 1s;
+}
+
+
+.container:hover {
+    background: blue;
+    transform: scale(2);
+        animation: fire 1s linear infinite;
+
+}
+
+.header {
+    color: magenta;
+}
