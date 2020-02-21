@@ -8,6 +8,7 @@
     <h1>Photos upload</h1>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
+<!--        Can't you just use plain form?-->
         {{ form.as_p }}
         <button type="submit" class="btn btn-primary">Upload photo</button>
     </form>

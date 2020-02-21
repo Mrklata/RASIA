@@ -1,7 +1,5 @@
 from django.urls import path
 from . import views
-from rasiasite.rasiasite import settings
-from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
 
 urlpatterns = [
     path('', views.main_site, name='main_site'),
@@ -14,6 +12,4 @@ urlpatterns = [
     path('movies/', views.movies, name='movies'),
     path('other/', views.other, name='other'),
     path('from_back/', views.from_back, name='from_back'),
-    staticfiles_urlpatterns(),
-    static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
 ]

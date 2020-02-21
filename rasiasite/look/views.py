@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from .form import FileForm
+from .models import File
 
 
 def main_site(request):
-    return render(request, 'look/main_site.html')
+    file = File.objects.all()[0]
+    return render(request, 'look/main_site.html', {"file": file})
 
 
 def photos(request):
@@ -22,11 +24,11 @@ def bathroom(request):
 
 
 def kitchen(request):
-    return render(request, 'look/kitchen.html')
+    return render(request, 'look/kitchen.html', {"title": "kitchen"})
 
 
 def closet(request):
-    return render(request, "look/closet.html")
+    return render(request, "look/closet.html", {"title": "closet"})
 
 
 def beds(request):
