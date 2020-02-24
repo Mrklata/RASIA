@@ -1,18 +1,33 @@
-<html>
-    <style>
-        body {
-            background-image: url('');
-    </style>
-    <body>
-        <center>
-            <h1>Main Site</h1>
-            <img src="logo.jpg">
-        </center>
-        <a href="bathroom/"> Bathroom </a>
-        <a href="kitchen/">kuchnia</a>
-        <a href="closet/">szafy</a>
-        <a href="other/">inne</a>
-        <a href="movies/">filmy instruktarzowe</a>
-        <a href="beds/">łóżka</a>
-    </body>
+{% load static %}
+
+<html lang="pl">
+<head>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>main | </title>
+</head>
+<body>
+<div id="logoContainer">
+    <img src="{% static 'img/logo.png' %} " alt="logo">
+</div>
+<h1 id="title"> Meble na wymiar </h1>
+<div id="contentContainer">
+    <div class="pages-images">
+        <a href={% url 'bathroom' %}> Łazienki </a>
+        <a href={% url 'kitchen' %}> Kuchnie </a>
+        <a href={% url 'closet' %}> Szafy </a>
+        <a href={% url 'beds' %}> Łóżka </a>
+        <a href={% url 'other' %}> Inne </a>
+        <a href={% url 'movies' %}> Filmy </a>
+    </div>
+    <div id="contacts">
+        <p> Bartosz Kowalczyk </p>
+        <p> +48 506 774 568 </p>
+        <p> email </p>
+        <p> adres </p>
+        <p> mapka z pin</p>
+    </div>
+</div>
+<div id="background" style="background-image: url('{% static "img/bcg.jpg" %}')"></div>
+
+</body>
 </html>

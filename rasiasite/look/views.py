@@ -1,20 +1,14 @@
 from django.shortcuts import render
-from .form import FileForm
+from look.models import Image
 
 
 def main_site(request):
-    return render(request, 'look/main_site.html')
+    file = Image.objects.filter(name="main_logo")
+    return render(request, 'look/main_site.html', {'file': file})
 
 
 def photos(request):
     return render(request, 'look/photos.html')
-
-
-def photo_upload(request):
-    form = FileForm()
-    return render(request, 'look/photos_upload.html', {
-        'form': form
-    })
 
 
 def bathroom(request):
