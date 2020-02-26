@@ -1,14 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+{% load static %}
+
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/main.css' %}">
     <title>Bathroom</title>
 </head>
 <body>
-<center>
-    <h1 style="color:red; font-family:monospace; font-size:40px">Łazienka</h1>
+<div class="title-site">
+    <div id="left">
+        <a href="{% url 'main_site' %}"> <img src="{% static 'img/home.png' %}"></a>
+    </div>
+    <div id="center"><h1>Łazienka</h1></div>
 
-</center>
+</div>
+
+<div id="background" style="background-image: url('{% static "img/bcg.jpg" %}')"></div>
+
+<div class="loop-img">
+    {% for i in file %}
+    <div class="photos-sites">
+
+        <img src="{{ i.image.url }}" alt="img">
+        <div class="description">
+            <p> - {{ i.description }}</p>
+
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
 </body>
 </html>

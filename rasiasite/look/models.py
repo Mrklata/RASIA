@@ -8,12 +8,16 @@ class Contact(models.Model):
 
 class Image(models.Model):
     SECTION = (
-        ("logo", "logo"),
-        ("href", "odnośnik"),
-        ("image", "zdjęcie")
+        ("bathroom", "łazienka"),
+        ("kitchen", "kuchnia"),
+        ("closet", "szafy"),
+        ("beds", "łóżka"),
+        ("other", "inne"),
+        ("back", "zaplecze"),
     )
 
     name = models.CharField(max_length=100)
+    description = models.CharField(max_length=3000, default="Ah ta jakość")
     image = models.ImageField(upload_to='media')
     section = models.CharField(max_length=100, choices=SECTION)
 

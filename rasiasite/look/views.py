@@ -3,32 +3,32 @@ from look.models import Image
 
 
 def main_site(request):
-    file = Image.objects.filter(name="main_logo")
-    return render(request, 'look/main_site.html', {'file': file})
-
-
-def photos(request):
-    return render(request, 'look/photos.html')
+    return render(request, 'look/main_site.html')
 
 
 def bathroom(request):
-    return render(request, 'look/bathroom.html')
+    file = Image.objects.filter(section='bathroom')
+    return render(request, 'look/bathroom.html', {'file': file})
 
 
 def kitchen(request):
-    return render(request, 'look/kitchen.html')
+    file = Image.objects.filter(section='kitchen')
+    return render(request, 'look/kitchen.html', {'file': file})
 
 
 def closet(request):
-    return render(request, "look/closet.html")
+    file = Image.objects.filter(section='closet')
+    return render(request, "look/closet.html", {'file': file})
 
 
 def beds(request):
-    return render(request, 'look/beds.html')
+    file = Image.objects.filter(section='beds')
+    return render(request, 'look/beds.html', {'file': file})
 
 
 def other(request):
-    return render(request, 'look/other.html')
+    file = Image.objects.filter(section='other')
+    return render(request, 'look/other.html', {'file': file})
 
 
 def movies(request):
@@ -36,6 +36,6 @@ def movies(request):
 
 
 def from_back(request):
-    return render(request, 'look/from_back.html')
+    file = Image.objects.filter(section='back')
+    return render(request, 'look/from_back.html', {'file': file})
 # Create your views here.
-

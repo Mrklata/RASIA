@@ -13,8 +13,10 @@
 
 body {
   background-color: rgba(0, 0, 0, 0.6);
+  margin: 0;
 }
-#title{
+
+.title {
   text-align: center;
   color: #ffb53b;
   font-size: 50px;
@@ -22,13 +24,63 @@ body {
   -webkit-text-stroke: 1px black;
   //text-shadow: -1px 0 black, -1px 0 black, -1px 0 black, -1px 0 black;
 }
+
+.title-site {
+  height: 100px;
+  width: 100vw;
+  font-size: 40px;
+  border-style: solid;
+  //
+  //h1 {
+  //  color: #ffb53b;
+  //  font-family: "Apple Chancery", cursive;
+  //  -webkit-text-stroke: 1px black;
+  //
+  //}
+
+  display: flex;
+  align-items: center;
+  //justify-content: center;
+  background: #ffffff;
+
+}
+
+#left {
+  float: left;
+
+  img {
+    height: 100px;
+    width: 100px;
+    transition: background 0.3s;
+    background: #ffb53b;
+
+    &:hover {
+      background: #000000;
+    }
+  }
+}
+
+#center {
+
+  h1 {
+    color: #ffb53b;
+    font-family: "Apple Chancery", cursive;
+    -webkit-text-stroke: 1px black;
+
+  }
+
+  display: inline-block;
+
+  margin: 0 auto;
+}
+
 #logoContainer {
   display: flex;
   align-content: center;
   justify-content: center;
 
   img {
-    height: 368px;
+    height: 290px;
     width: auto;
   }
 }
@@ -36,10 +88,9 @@ body {
 #contentContainer {
   display: flex;
   justify-content: space-evenly;
-  color: #e8b68d;
+  color: #EDF7F6;
   font-size: 30px;
   font-family: "DejaVu Serif", sans-serif;
-  transition: font-size 0.2s;
   text-decoration: none;
 
   p {
@@ -63,14 +114,16 @@ body {
   width: 300px;
 
   a {
-    color: #e8b68d;
+    //color: #e8b68d;
+    color: #EDF7F6;
     font-size: 40px;
     font-family: "DejaVu Serif", sans-serif;
-    transition: font-size 0.2s;
+    transition: font-size 0.2s, color 0.2s;
     text-decoration: none;
 
     &:hover {
       font-size: 80px;
+      color: #ffb53b;
     }
   }
 
@@ -78,4 +131,45 @@ body {
     height: 300px;
     width: auto;
   }
+}
+
+.photos-sites {
+  border-style: solid;
+  display: flex;
+  background: white;
+  width: 600px;
+  height: 300px;
+  margin-top: 10px;
+  margin-right: 10px;
+  float: left;
+
+  img {
+    height: 300px;
+    width: auto;
+
+  }
+
+}
+
+
+.description {
+  width: auto;
+  border: 2px black;
+  margin-left: 10px;
+
+  p {
+    color: #000000;
+    font-family: "DejaVu Serif", sans-serif;
+    max-width: available;
+    max-height: 280px;
+    word-break: break-all;
+  }
+
+
+}
+
+.loop-img {
+  position: absolute;
+  left: 10%;
+  right: 10%;
 }

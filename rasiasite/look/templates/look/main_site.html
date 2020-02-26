@@ -7,9 +7,9 @@
 </head>
 <body>
 <div id="logoContainer">
-    <img src="{% static 'img/logo.png' %} " alt="logo">
+    <img src="{% static 'img/main_logo.png' %} " alt="logo">
 </div>
-<h1 id="title"> Meble na wymiar </h1>
+<h1 class="title"> Meble na wymiar </h1>
 <div id="contentContainer">
     <div class="pages-images">
         <a href={% url 'bathroom' %}> Łazienki </a>
@@ -18,6 +18,8 @@
         <a href={% url 'beds' %}> Łóżka </a>
         <a href={% url 'other' %}> Inne </a>
         <a href={% url 'movies' %}> Filmy </a>
+        <a href={% url 'from_back' %}> Zaplecze </a>
+
     </div>
     <div id="contacts">
         <p> Bartosz Kowalczyk </p>

@@ -3,7 +3,6 @@ from look import views
 
 urlpatterns = [
     path('', views.main_site, name='main_site'),
-    path('photos/', views.photos, name='photos'),
     path('bathroom/', views.bathroom, name='bathroom'),
     path('kitchen/', views.kitchen, name='kitchen'),
     path('closet/', views.closet, name='closet'),
