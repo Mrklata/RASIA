@@ -92,6 +92,10 @@ body {
   font-size: 30px;
   font-family: "DejaVu Serif", sans-serif;
   text-decoration: none;
+}
+
+#contacts {
+  margin-left: 25px;
 
   p {
     margin-bottom: 10px;
@@ -111,7 +115,9 @@ body {
 .pages-images {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 566.25px;
+  text-align: end;
+  margin-right: 25px;
 
   a {
     //color: #e8b68d;
@@ -162,7 +168,7 @@ body {
     font-family: "DejaVu Serif", sans-serif;
     max-width: available;
     max-height: 280px;
-    word-break: break-all;
+    word-break: break-word;
   }
 
 

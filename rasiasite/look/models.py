@@ -1,4 +1,5 @@
 from django.db import models
+from django import forms
 
 
 class Contact(models.Model):
@@ -17,7 +18,7 @@ class Image(models.Model):
     )
 
     name = models.CharField(max_length=100)
-    description = models.CharField(max_length=3000, default="Ah ta jakość")
+    description = models.TextField(max_length=3000, default="max 15 linijek")
     image = models.ImageField(upload_to='media')
     section = models.CharField(max_length=100, choices=SECTION)
 
